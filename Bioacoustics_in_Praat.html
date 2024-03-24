@@ -1,0 +1,750 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Bioacoustics in Praat &#8212; Evolution of Language &amp; Music Computer Labs</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Bioacoustics_in_Praat';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Evolution &amp; phylogenetic reconstruction" href="Evolution_%26_phylogenetic_reconstruction.html" />
+    <link rel="prev" title="Welcome to the Evolamus Computer Labs" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Evolution of Language & Music Computer Labs - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Evolution of Language & Music Computer Labs - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to the Evolamus Computer Labs
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Bioacoustics in Praat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Evolution_%26_phylogenetic_reconstruction.html">Evolution &amp; phylogenetic reconstruction</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/clclab/elm-labs" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/clclab/elm-labs/issues/new?title=Issue%20on%20page%20%2FBioacoustics_in_Praat.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Bioacoustics_in_Praat.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Bioacoustics in Praat</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting started</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-anatomy-of-a-sound">The anatomy of a sound</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soundwaves-and-spectrums">Soundwaves and spectrums</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-waveform-and-spectrogram">The waveform and spectrogram</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-spectrograms">Plotting spectrograms</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-pitch-contours">Plotting pitch contours</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#speech">Speech</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#phonemes">Phonemes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-sound-of-silence">The sound of silence</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="bioacoustics-in-praat">
+<h1>Bioacoustics in Praat<a class="headerlink" href="#bioacoustics-in-praat" title="Link to this heading">#</a></h1>
+<div class="line-block">
+<div class="line"><em>Written by Bastiaan van der Weij and Dieuwke Hupkes in 2016.</em></div>
+<div class="line"><em>Updated by Peter Dekker (2017), Bas Cornelissen (2017, 2018, 2019) and Marianne de Heer Kloots (2018).</em></div>
+</div>
+<p>Sounds are the raw materials in the study of language and music. In this lab we’ll learn how to use Praat for analysing and editing sounds. We’ll explore sound signals and look at how they relate to the things we perceive, such as words, melodies or rhythms.</p>
+<section id="getting-started">
+<h2>Getting started<a class="headerlink" href="#getting-started" title="Link to this heading">#</a></h2>
+<p>Praat is a free and open-source computer program widely used in phonetics (the study of human speech) and bioacoustics. It is a swiss-army knife containing many tools for visualising, analysing and synthesizing sounds.</p>
+<ul>
+<li><p>First, download the materials you will need for this lab assignment, extract the contents of the zip-file and make sure you know where they are located:</p>
+<blockquote>
+<div><p><a class="reference download internal" download="" href="_downloads/c9bcaf103cf7e3640679bde7f20583c2/bioacoustics.zip"><code class="xref download docutils literal notranslate"><span class="pre">bioacoustics.zip</span></code></a></p>
+</div></blockquote>
+</li>
+<li><p>Go to <a class="reference external" href="http://www.praat.org">www.praat.org</a>, find the download page for your favourite operating system and follow the installation instructions until you have started the Praat program (usually this involves double-clicking a beautiful pink icon).</p></li>
+<li><p>You will see two windows: <strong>Praat objects</strong> and <strong>Praat picture</strong>. <strong>Praat objects</strong> is where the sounds you are editing or analyzing will appear. <strong>Praat picture</strong> is where you can visualize the output of various analyses.</p></li>
+</ul>
+</section>
+<section id="the-anatomy-of-a-sound">
+<h2>The anatomy of a sound<a class="headerlink" href="#the-anatomy-of-a-sound" title="Link to this heading">#</a></h2>
+<p>From the <strong>Praat objects</strong> window, navigate to <em>Open &gt; Read from file</em>, or type Ctrl-O. In the <code class="docutils literal notranslate"><span class="pre">materials</span></code> folder we provided with this lab, you’ll find a file called <code class="docutils literal notranslate"><span class="pre">sine.wav</span></code>. Open and load it into Praat. Now that we have a Praat object, let’s have a look at what we can learn. First, let’s play the sound.</p>
+<div class="admonition-exercise-1 admonition">
+<p class="admonition-title">Exercise 1</p>
+<p>Play the sound by selecting it from <strong>Praat objects</strong> and clicking <code class="docutils literal notranslate"><span class="pre">Play</span></code>.</p>
+</div>
+<section id="soundwaves-and-spectrums">
+<h3>Soundwaves and spectrums<a class="headerlink" href="#soundwaves-and-spectrums" title="Link to this heading">#</a></h3>
+<p>The waveform is the most straightforward visual representation of a sound. The waveform is a plot of how the air pressure, recorded by the microphone, changes over time.</p>
+<div class="admonition-exercise-2 admonition">
+<p class="admonition-title">Exercise 2</p>
+<ul class="simple">
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">&amp;</span> <span class="pre">Edit</span></code> to look at the waveform of our sound. You’ll see two visual representations of the sound. The waveform is the upper one.</p></li>
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">&amp;</span> <span class="pre">Edit</span></code> window, zoom in on the waveform until you can clearly see the shape of the sound waves.</p></li>
+</ul>
+</div>
+<p>You’ll notice that this sound wave consists of a constantly repeating pattern. Each repetition of this pattern constitutes one vibration. The number of vibrations per second is called the <em>frequency</em> of the sound. Let’s try to find out the frequency of the sound we’ve opened. To do this, we’ll use a different representation of the sound, called a <em>Spectrum</em>. The Spectrum can be stored in a new Praat object (apart from sounds, Praat objects can also represent other information, such as the results of various sound-analyses).</p>
+<div class="admonition-exercise-3 admonition">
+<p class="admonition-title">Exercise 3</p>
+<ul class="simple">
+<li><p>In the Praat objects window, with the sine sound object selected, click <code class="docutils literal notranslate"><span class="pre">Analyse</span> <span class="pre">Spectrum</span> <span class="pre">-</span></code> and then <code class="docutils literal notranslate"><span class="pre">To</span> <span class="pre">Spectrum...</span></code>. Accept the default settings by clicking OK.</p></li>
+<li><p>Select the Spectrum object (if it isn’t already selected) and visualize it by clicking the <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">&amp;</span> <span class="pre">Edit</span></code> button.</p></li>
+<li><p>Study the window and play around with it for a while: click anywhere in the plot, drag the mouse. What does the x-axis represent? What does the y-axis represent?</p></li>
+<li><p>Find the x-coordinate of the peak in the spectrum as precisely as possible. You’ll probably need to zoom in a bit to do this accurately (tip: select the area around the peak you want to study and select <code class="docutils literal notranslate"><span class="pre">Zoom</span> <span class="pre">to</span> <span class="pre">selection</span></code> from the View menu at the top of the window, or press Ctrl-N). What is the frequency of the sound?</p></li>
+</ul>
+</div>
+<p>As you have heard, and seen, this sound is not particularly exciting.
+Let’s look at a more interesting sound.</p>
+<div class="admonition-exercise-4 admonition">
+<p class="admonition-title">Exercise 4</p>
+<ul class="simple">
+<li><p>Load the file <code class="docutils literal notranslate"><span class="pre">bassoon.wav</span></code> into a Praat object.</p></li>
+<li><p>Listen to both sounds (<code class="docutils literal notranslate"><span class="pre">bassoon.wav</span></code> and <code class="docutils literal notranslate"><span class="pre">sine.wav</span></code>) and compare. Do you hear any similarites, if so which? Which differences do you hear?</p></li>
+<li><p>Open the waveform view and zoom in (to somewhere in the middle of the sound) until you can see the individual vibrations of air-pressure (you can use the same zoom to selection technique that you used previously).</p></li>
+</ul>
+</div>
+<p>You should notice that the individual vibrations form a self-repeating pattern.</p>
+<div class="admonition-exercise-5 admonition">
+<p class="admonition-title">Exercise 5</p>
+<ul class="simple">
+<li><p>Find the shortest pattern in the waveform that contains no repetitions (Praat may already have marked this for you; you can turn this on or off by clicking <em>Pulses &gt; Show pulses</em> in the View &amp; Edit window).</p></li>
+<li><p>Place the cursor at the start of the pattern, write down the exact time marking of the cursor.</p></li>
+<li><p>Place the cursor at the end of the pattern (exactly where it begins to repeat itself again), write down the exact time marking of the cursor.</p></li>
+<li><p>Using the two time markings, calculate the frequency (in repetitions per second) of the pattern you found.</p></li>
+</ul>
+</div>
+<p>The frequency you just found—the frequency of the shortest non-repeating pattern—is called the <em>fundamental frequency</em>. The fundamental frequency usually (but not always) corresponds to perceived pitch. As we will see now, sounds often contain many more frequencies, which can be discovered by looking at the spectrum.</p>
+<div class="admonition-exercise-6 admonition">
+<p class="admonition-title">Exercise 6</p>
+<p>Having analyzed the fundamental frequency of <code class="docutils literal notranslate"><span class="pre">bassoon.wav</span></code> and frequency of <code class="docutils literal notranslate"><span class="pre">sine.wav</span></code>, can you now, more precisely, describe the similarity between the two sounds?</p>
+</div>
+<div class="admonition-exercise-7 admonition">
+<p class="admonition-title">Exercise 7</p>
+<ul class="simple">
+<li><p>Create a Spectrum object of <code class="docutils literal notranslate"><span class="pre">bassoon.wav</span></code> and display it with <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">&amp;</span> <span class="pre">Edit</span></code>.</p></li>
+<li><p>Can you find a peak in the spectrum corresponding to the frequency you found before?</p></li>
+<li><p>Read the frequencies of some other peaks in the spectrum. What do you notice about their relation to each other?</p></li>
+<li><p>Does the pitch that we perceive (the fundamental frequency) always correspond to the frequency of the highest peak in the spectrum?</p></li>
+</ul>
+</div>
+<p>The peaks you found in the spectrum are called harmonics. The same note on various instruments may have the same pitch, but the energy distribution over the harmonics varies, resulting in different <em>timbres</em>. The same principle allows us to distinguish between different vowels.</p>
+</section>
+<section id="the-waveform-and-spectrogram">
+<h3>The waveform and spectrogram<a class="headerlink" href="#the-waveform-and-spectrogram" title="Link to this heading">#</a></h3>
+<p>Now we’ll look at human vocalizations.</p>
+<div class="admonition-exercise-8 admonition">
+<p class="admonition-title">Exercise 8</p>
+<ul class="simple">
+<li><p>Load the files <code class="docutils literal notranslate"><span class="pre">wermke-german-baby.wav</span></code> and <code class="docutils literal notranslate"><span class="pre">wermke-chinese-baby</span></code> into Praat and listen to both sounds <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">&amp;</span> <span class="pre">Edit</span></code> to look at the waveform for one of the files. Without zooming in, which properties of the sound can you recognize by just looking at the waveform?</p></li>
+</ul>
+</div>
+<p>As you can hear and see, these sounds are more complex than the sounds we’ve dealt with so far. The previous two sounds didn’t change in pitch and maintained a (relatively) constant timbre throughout their duration. In the new sounds, the pattern of vibrations in is continuously changing. Counting vibrations or looking at the spectrum will not be able to tell us much. With these sort of sounds, a <em>spectrogram</em> is a much more informative visualisation.</p>
+<div class="admonition-exercise-9 admonition">
+<p class="admonition-title">Exercise 9</p>
+<ul class="simple">
+<li><p>You can view the spectrogram in the View &amp; Edit window, just below the waveform (if you don’t see it, click <em>Spectrum &gt; Show spectrogram</em>). There might be some colorful lines and dots displayed on top, that correspond to different analyses. You can turn these on and off by clicking <em>Pitch &gt; Show pitch</em> (for the blue Pitch line), <em>Intensity &gt; Show intensity</em> (for the yellow Intensity line), and <em>Formant &gt; Show formants</em> (for the red Formant dots).</p></li>
+<li><p>Note that the Pitch and Intensity analyses have different y-axis values from the spectrogram itself. The spectrogram y-axis values are shown on the <em>left</em> of the spectrogram, in <em>black</em>. You can change the range of the spectrogram y-axis in the <em>Spectrum &gt; Spectrogram settings…</em> window. The Pitch y-axis values (if turned on) are shown on the <em>right</em> of the spectrogram, in <em>blue</em>. You can change the range of the Pitch analysis in the <em>Pitch &gt; Pitch settings…</em> window. The Intensity y-axis values (if turned on) are also shown on the <em>right</em> of the spectrogram, in <em>green</em>. You can change the range of the Intensity analysis in the <em>Intensity &gt; Intensity settings…</em> window. If you want, play around with these things a bit by changing the numbers in the settings windows and clicking <em>Apply</em> to see what changes in the spectrogram and analysis lines. Click <em>Standards</em> in the settings windows to go back to the default settings.</p></li>
+<li><p>Are the default settings for the Pitch analysis (blue line) appropriate for analyzing this baby’s cry? Why/why not?</p></li>
+</ul>
+</div>
+<div class="admonition-exercise-10 admonition">
+<p class="admonition-title">Exercise 10</p>
+<ul class="simple">
+<li><p>Now turn the Pitch, Intensity and Formant analyses off so you can clearly see the spectrogram itself.</p></li>
+<li><p>What information does a spectrogram visualize? What do the x- and y-axes represent? What does the darkness of pixels mean?</p></li>
+<li><p>Now turn the Pitch analysis on again and change the settings so that the Pitch y-axis range is the same as the Spectrogram y-axis range. Given what you learned about pitch in the previous section and what you know about the spectrogram, do you agree with the result of Praat’s Pitch tracking algorithm (i.e. is the blue line correct)? Why/why not?</p></li>
+</ul>
+</div>
+</section>
+<section id="plotting-spectrograms">
+<h3>Plotting spectrograms<a class="headerlink" href="#plotting-spectrograms" title="Link to this heading">#</a></h3>
+<p>Now we’re going to explore some Praat functionality to draw two spectrograms above eachother in a picture. We’ve seen how to view and edit Praat objects. Praat has different viewers for different objects. In these viewers, you can interact with the objects and zoom in to regions of interest. However, when you’re, for example, writing a paper, you want to draw nice pictures containing these visualisations. For this reason, most Praat objects can be drawn into the <strong>Praat picture</strong> window. That picture, in turn, can be exported to various image formats.</p>
+<div class="admonition-exercise-11 admonition">
+<p class="admonition-title">Exercise 11</p>
+<ul class="simple">
+<li><p>Select one of the two baby sounds.</p></li>
+<li><p>In the <em>Praat picture</em> window draw a rectangle with a width of six and height of four (click and drag the mouse).</p></li>
+<li><p>Create a spectrogram object. Click on the <code class="docutils literal notranslate"><span class="pre">Analyse</span> <span class="pre">spectrum</span> <span class="pre">-</span></code> button. From there, click on the <code class="docutils literal notranslate"><span class="pre">To</span> <span class="pre">spectrogram...</span></code> button and accept the default settings.</p></li>
+<li><p>Select spectrogram object that you just created, click <code class="docutils literal notranslate"><span class="pre">Paint...</span></code> (under the <code class="docutils literal notranslate"><span class="pre">Draw</span> <span class="pre">-</span></code> button) and accept the default settings.</p></li>
+<li><p>Draw a second rectangle below the first one. Use the second rectangle to draw the spectrogram of the other baby sound.</p></li>
+<li><p>Suppose you have heard the two sounds, and are now given these two spectrograms. Would you be able to figure which spectrogram belongs to which baby sound? If so, how? If not, explain why not.</p></li>
+</ul>
+</div>
+</section>
+<section id="plotting-pitch-contours">
+<h3>Plotting pitch contours<a class="headerlink" href="#plotting-pitch-contours" title="Link to this heading">#</a></h3>
+<p>A common analysis used for sounds is the <span class="math notranslate nohighlight">\(F_0\)</span> analysis, or fundamental frequency analysis. As we’ve learned, the fundamental frequency generally corresponds to perceived pitch. We can use Praat to draw a <em>Pitch contour</em> (this is actually the same type of analysis as the blue line we saw before on top of the spectrogram).</p>
+<div class="admonition-exercise-12 admonition">
+<p class="admonition-title">Exercise 12</p>
+<ul class="simple">
+<li><p>Erase your Praat picture, by going to the Praat picture window, and clicking <em>Edit &gt; Erase all</em>.</p></li>
+<li><p>If you want, you can change the color and thickness of the drawn lines to make them stand out better. To do this, open the <code class="docutils literal notranslate"><span class="pre">Pen</span></code> menu, and set the line width to 2.0 (by clicking on <code class="docutils literal notranslate"><span class="pre">Line</span> <span class="pre">width...</span></code>)</p></li>
+<li><p>In the same menu, change the color from black to something else. For example, red.</p></li>
+</ul>
+</div>
+<p>Now we’ll run the <span class="math notranslate nohighlight">\(F_0\)</span> analysis and draw the results.</p>
+<div class="admonition-exercise-13 admonition">
+<p class="admonition-title">Exercise 13</p>
+<ul class="simple">
+<li><p>Go to the Praat objects window.</p></li>
+<li><p>Select the <em>Sound</em> object you want to analyze.</p></li>
+<li><p>Under <code class="docutils literal notranslate"><span class="pre">Analyse</span> <span class="pre">periodicity</span></code>, click <code class="docutils literal notranslate"><span class="pre">To</span> <span class="pre">pitch...</span></code></p></li>
+<li><p>Draw the created Pitch object using the same method we used earlier. How do you think does Praat construct the Pitch contour given a sound? Think of the manual analyses we did before. Describe the process informally, i.e., you don’t need to be very precise.</p></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="speech">
+<h2>Speech<a class="headerlink" href="#speech" title="Link to this heading">#</a></h2>
+<p>Although we’re all very good at producing and interpreting speech sounds, recognizing sounds in waveforms or spectrograms is much harder. In the lecture and tutorial you have learned how different vowels are distinguished by their first two formants (<span class="math notranslate nohighlight">\(F_1\)</span> and <span class="math notranslate nohighlight">\(F_2\)</span>), and different consonants are distinguished on the three dimensions of <em>manner</em>, <em>place</em> and <em>voicing</em>.</p>
+<div class="admonition-exercise-14 admonition">
+<p class="admonition-title">Exercise 14</p>
+<ul class="simple">
+<li><p>How would you identify different vowels by just looking at their spectrogram, without listening? (i.e. how would you distinguish /i/ and /u/?)</p></li>
+<li><p>How would you distinguish voiced sounds from unvoiced sounds in a spectrogram?</p></li>
+<li><p>How would you identify a <em>fricative</em> in a spectrogram?What about a <em>plosive</em>?</p></li>
+</ul>
+</div>
+<section id="phonemes">
+<h3>Phonemes<a class="headerlink" href="#phonemes" title="Link to this heading">#</a></h3>
+<p>Phonemes are the basic components of speech. The word “slit”, for example, consists of a <em>fricative</em> /s/, a <em>lateral</em> /l/, a <em>vowel</em> /i/, and a <em>plosive</em> (or <em>stop</em>) /t/. Fricatives are generated by making air ‘whirl’ through a constriction created by two articulators (e.g. your two lips, or your tongue and palate). Laterals are generated by letting air flow around the sides of the tongue. Plosives are generated by completely stopping the airflow for a very small fraction of time, resulting in complete silence.</p>
+<div class="admonition-exercise-15 admonition">
+<p class="admonition-title">Exercise 15</p>
+<ul class="simple">
+<li><p>Load the file <code class="docutils literal notranslate"><span class="pre">slit.wav</span></code>.</p></li>
+<li><p>Take a look at the waveform and spectrogram and listen to the file.</p></li>
+<li><p>By looking carefully at the waveform and spectrogram, see if you can identify the individual phonemes making up the word. This may be harder than you expect.</p></li>
+</ul>
+</div>
+<div class="admonition-exercise-16 admonition">
+<p class="admonition-title">Exercise 16</p>
+<ul class="simple">
+<li><p>To verify your identifications, extract each phoneme into a separate Praat object. Select the phoneme in the sound signal (you can either drag in the waveform or in the spectrogram), and click <em>File &gt; Extract selected sound (preserve times)</em>. This will create a new Praat object, “untitled”. Use the rename button to rename it “s”, “l”, “i” or “t” to help you remember which phoneme it contains.</p></li>
+<li><p>Create a spectrum (not a spectrogram) object for the /s/ (<em>fricative</em>) and /i/ (<em>vowel</em>) sound and compare the two.</p></li>
+<li><p>Now compare the /s/ and /i/ spectrums to the corresponding part of the spectrogram for slit.</p></li>
+</ul>
+</div>
+<p>Previously, we looked at harmonic frequencies in the bassoon sound. Amplified harmonics in speech sounds show up as peaks in the spectrum, or dark spots in the spectrogram. These peaks are called formants. Vowels can be differentiated by looking at how their formants are distributed.</p>
+<div class="admonition-exercise-17 admonition">
+<p class="admonition-title">Exercise 17</p>
+<p>Articulatorily, what is the difference between formants and harmonics? How do they relate to the source-filter model?</p>
+</div>
+</section>
+<section id="the-sound-of-silence">
+<h3>The sound of silence<a class="headerlink" href="#the-sound-of-silence" title="Link to this heading">#</a></h3>
+<p>Very small changes to the signal can sometimes have dramatic effects on perception. For example, inserting a small period of silence (silent interval) at specific places in words can create the effect of hearing an extra phoneme. In this final part of the lab we’ll explore the effect of inserting a small silence in our recording of “slit” at just the right place.</p>
+<p>First, we’ll create a small silence to be inserted into the sound. To find out an appropriate duration for this silence, we’ll look at a paper that investigated the effect of a silent interval in the word “slit”. Have a look at the methods section, as well as the graph with results, in the paper by <a class="reference external" href="https://doi.org/10.3758/BF03214295">Marcus (1978)</a> that’s attached to this lab (<code class="docutils literal notranslate"><span class="pre">marcus-1978.pdf</span></code>). Use the graph summarizing their results to find a good duration for the silent interval.</p>
+<div class="admonition-exercise-18 admonition">
+<p class="admonition-title">Exercise 18</p>
+<ul class="simple">
+<li><p>In the Praat objects window, go to the menu <em>New &gt; Sound</em> and click <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">sound</span> <span class="pre">from</span> <span class="pre">formula</span></code>.</p></li>
+<li><p>Change the value of the <em>Name</em> field to “silence”.</p></li>
+<li><p>Adjust the end time to the duration of the silent interval that you found. - In the <em>Formula</em> field, type “0” (zero).</p></li>
+<li><p>Click OK Open the <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">&amp;</span> <span class="pre">Edit</span></code> screen for your new sound.</p></li>
+<li><p>Select the entire sound (have a look a the <em>Select</em> menu if you run into issues).</p></li>
+<li><p>Copy it, using <em>Edit &gt; Copy selection to Sound clipboard</em> or Ctrl-C.</p></li>
+</ul>
+</div>
+<p>Now we’re going to insert the silence into our recording of the word “slit”.</p>
+<div class="admonition-exercise-19 admonition">
+<p class="admonition-title">Exercise 19</p>
+<ul class="simple">
+<li><p>Go to the View &amp; Edit window for the sound <code class="docutils literal notranslate"><span class="pre">slit.wav</span></code>.</p></li>
+<li><p>Using the spectrogram and waveform, find a spot in between the “s” and the “l” sound and place the cursor there.</p></li>
+<li><p>To prevent sudden jumps in the waveform, we should insert our silence at a moment where the wave crosses the zero line. After having placed the cursor between the “s” and “l” sound, click on <em>Select &gt; Move cursor to nearest zero crossing</em>.</p></li>
+<li><p>Now insert the silence we copied earlier by clicking <em>Edit &gt; Paste after selection</em>, or by pressing Ctrl-V.</p></li>
+<li><p>Play the sound. Which word do you hear?</p></li>
+</ul>
+</div>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id2" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>During the lecture, you heard cries from a French and a German baby. These were used in a study done by <a class="reference external" href="https://doi.org/10.1016/j.cub.2009.09.064">Mampe et al., 2009</a>. The recordings that you are analyzing in this lab were recorded for a recent follow-up study done by <a class="reference external" href="https://doi.org/10.1016/j.jvoice.2016.06.009">Wermke et al., 2017</a> comparing German and Chinese babies. Have a look at the studies and the accompanying sounds if you’re interested! Both are included in this lab’s materials.</p>
+</aside>
+</aside>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Welcome to the Evolamus Computer Labs</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Evolution_%26_phylogenetic_reconstruction.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Evolution &amp; phylogenetic reconstruction</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting started</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-anatomy-of-a-sound">The anatomy of a sound</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soundwaves-and-spectrums">Soundwaves and spectrums</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-waveform-and-spectrogram">The waveform and spectrogram</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-spectrograms">Plotting spectrograms</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-pitch-contours">Plotting pitch contours</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#speech">Speech</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#phonemes">Phonemes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-sound-of-silence">The sound of silence</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+</div>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
