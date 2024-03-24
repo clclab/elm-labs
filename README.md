@@ -35,3 +35,5 @@ To make edits in the lab assignments and publish them to the website, you need t
    ghp-import -n -p -f book/_build/html
    ```
 8. Typically the changes should be live after a few minutes. If you don't see the changes, try opening the website in an incognito window; if the changes do show up there, it should be fine. If not, check the [Actions tab](https://github.com/clclab/elm-labs/actions) of this repository for build fails.
+
+Steps 1 and 2 only need to be done once; then repeat steps 3 through 7 anytime you want to make new edits.
