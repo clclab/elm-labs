@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
@@ -478,7 +478,6 @@ document.write(`
 <h1>Evolution &amp; phylogenetic reconstruction<a class="headerlink" href="#evolution-phylogenetic-reconstruction" title="Link to this heading">#</a></h1>
 <p><em>Written by Bastiaan van der Weij and Dieuwke Hupkes.<br />
 Updated by Bas Cornelissen, Peter Dekker and Marianne de Heer Kloots.</em></p>
-<p><a class="reference external" href="https://colab.research.google.com/github/clclab/elm-labs/blob/main/docs/instructions/lab2/Evolution_%26_phylogenetic_reconstruction.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
 <p>In this computer lab you will experiment with simulated evolution and phylogenetic reconstruction: the reconstruction of the evolutionary history of species, simulated genes, and even language and music.</p>
 <p>The lab contains <font color="orange"><b>Code</b></font> questions, where you need to enter some code to compute or simulate something yourself, and <font color="green"><b>Think</b></font> questions, which check your understanding of what is happening.</p>
 <p>Some notes on using this notebook:</p>
@@ -540,7 +539,7 @@ particular piece of code!</p>
 <span class="w">    </span><span class="nf">dir.create</span><span class="p">(</span><span class="s">&quot;data&quot;</span><span class="p">)</span>
 <span class="p">}</span>
 <span class="nf">if </span><span class="p">(</span><span class="o">!</span><span class="nf">file.exists</span><span class="p">(</span><span class="s">&quot;data/language_data.Rdata&quot;</span><span class="p">)){</span>
-<span class="w">    </span><span class="nf">download.file</span><span class="p">(</span><span class="s">&quot;https://raw.githubusercontent.com/clclab/elm-labs/main/docs/instructions/lab2/data/language_data.Rdata&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">download.file</span><span class="p">(</span><span class="s">&quot;https://github.com/clclab/elm-labs/raw/main/book/language_data.Rdata&quot;</span><span class="p">,</span><span class="w"> </span>
 <span class="w">              </span><span class="s">&quot;data/language_data.Rdata&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">mode</span><span class="o">=</span><span class="s">&quot;wb&quot;</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
