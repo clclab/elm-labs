@@ -1,4 +1,4 @@
 # EvoLaMus labs
 Lab assignments for the Evolution of Language & Music course.
 
-Website: clclab.github.io/elm-labs
+Website: [clclab.github.io/elm-labs](https://clclab.github.io/elm-labs/intro.html)
