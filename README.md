@@ -10,7 +10,7 @@ To make edits in the lab assignments and publish them to the website, you need t
    git clone git@github.com:clclab/elm-labs.git
    cd elm-labs
    ```
-2. Install [jupyter-book](https://jupyterbook.org/en/stable/intro.html) and [ghp-import](https://github.com/c-w/ghp-import))
+2. Install [jupyter-book](https://jupyterbook.org/en/stable/intro.html) and [ghp-import](https://github.com/c-w/ghp-import)
    ```
    pip install -U jupyter-book
    pip install ghp-import
