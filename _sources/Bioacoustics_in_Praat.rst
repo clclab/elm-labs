@@ -46,7 +46,7 @@ You'll notice that this sound wave consists of a constantly repeating pattern. E
     - In the Praat objects window, with the sine sound object selected, click ``Analyse Spectrum -`` and then ``To Spectrum...``. Accept the default settings by clicking OK.
     - Select the Spectrum object (if it isn't already selected) and visualize it by clicking the ``View & Edit`` button. 
     - Study the window and play around with it for a while: click anywhere in the plot, drag the mouse. What does the x-axis represent? What does the y-axis represent? 
-    - Find the x-coordinate of the peak in the spectrum as precisely as possible. You'll probably need to zoom in a bit to do this accurately (tip: select the area around the peak you want to study and select ``Zoom to selection`` from the View menu at the top of the window, or press Ctrl-N). What is the frequency of the sound?
+    - Find the x-coordinate of the peak in the spectrum as precisely as possible. You'll probably need to zoom in a bit to do this accurately (tip: select the area around the peak you want to study and select ``Zoom to selection`` from the Frequency menu at the top of the window, or press Ctrl-N). What is the frequency of the sound?
 
 As you have heard, and seen, this sound is not particularly exciting.
 Let's look at a more interesting sound.
@@ -95,15 +95,15 @@ As you can hear and see, these sounds are more complex than the sounds we've dea
 
 .. admonition:: Exercise 9
 
-    - You can view the spectrogram in the View & Edit window, just below the waveform (if you don't see it, click *Spectrum > Show spectrogram*). There might be some colorful lines and dots displayed on top, that correspond to different analyses. You can turn these on and off by clicking *Pitch > Show pitch* (for the blue Pitch line), *Intensity > Show intensity* (for the yellow Intensity line), and *Formant > Show formants* (for the red Formant dots). 
-    - Note that the Pitch and Intensity analyses have different y-axis values from the spectrogram itself. The spectrogram y-axis values are shown on the *left* of the spectrogram, in *black*. You can change the range of the spectrogram y-axis in the *Spectrum > Spectrogram settings...* window. The Pitch y-axis values (if turned on) are shown on the *right* of the spectrogram, in *blue*. You can change the range of the Pitch analysis in the *Pitch > Pitch settings...* window. The Intensity y-axis values (if turned on) are also shown on the *right* of the spectrogram, in *green*. You can change the range of the Intensity analysis in the *Intensity > Intensity settings...* window. If you want, play around with these things a bit by changing the numbers in the settings windows and clicking *Apply* to see what changes in the spectrogram and analysis lines. Click *Standards* in the settings windows to go back to the default settings. 
+    - You can view the spectrogram in the View & Edit window, just below the waveform (if you don't see it, click *Spectogram > Show spectrogram*). There might be some colorful lines and dots displayed on top, that correspond to different analyses. You can turn these on and off by clicking *Pitch > Show pitch* (for the blue Pitch line), *Intensity > Show intensity* (for the green Intensity line), and *Formants > Show formants* (for the red Formant dots). 
+    - Note that the Pitch and Intensity analyses have different y-axis values from the spectrogram itself. The spectrogram y-axis values are shown on the *left* of the spectrogram, in *black*. You can change the range of the spectrogram y-axis in the *Spectogram > Spectrogram settings...* window. The Pitch y-axis values (if turned on) are shown on the *right* of the spectrogram, in *blue*. You can change the range of the Pitch analysis in the *Pitch > Pitch settings...* window. The Intensity y-axis values (if turned on) are also shown on the *right* of the spectrogram, in *green*. You can change the range of the Intensity analysis in the *Intensity > Intensity settings...* window. If you want, play around with these things a bit by changing the numbers in the settings windows and clicking *Apply* to see what changes in the spectrogram and analysis lines. Click *Standards* in the settings windows to go back to the default settings. 
     - Are the default settings for the Pitch analysis (blue line) appropriate for analyzing this baby's cry? Why/why not?
 
 .. admonition:: Exercise 10
 
     - Now turn the Pitch, Intensity and Formant analyses off so you can clearly see the spectrogram itself. 
     - What information does a spectrogram visualize? What do the x- and y-axes represent? What does the darkness of pixels mean? 
-    - Now turn the Pitch analysis on again and change the settings so that the Pitch y-axis range is the same as the Spectrogram y-axis range. Given what you learned about pitch in the previous section and what you know about the spectrogram, do you agree with the result of Praat's Pitch tracking algorithm (i.e. is the blue line correct)? Why/why not?
+    - Now turn the Pitch analysis on again and change the settings so that the Pitch y-axis range is close to the Spectrogram y-axis range (i.e. 3.0 - 5000.0). Given what you learned about pitch in the previous section and what you know about the spectrogram, do you agree with the result of Praat's Pitch tracking algorithm (i.e. is the blue line correct)? Why/why not?
 
 Plotting spectrograms 
 --------------------- 
@@ -117,6 +117,7 @@ Now we're going to explore some Praat functionality to draw two spectrograms abo
     - Create a spectrogram object. Click on the ``Analyse spectrum -`` button. From there, click on the ``To spectrogram...`` button and accept the default settings. 
     - Select spectrogram object that you just created, click ``Paint...`` (under the ``Draw -`` button) and accept the default settings. 
     - Draw a second rectangle below the first one. Use the second rectangle to draw the spectrogram of the other baby sound. 
+    - Save the spectograms by selecting the area you'd like to save, and clicking on ``Save as 600-dpi PNG file`` under the ``File`` button. Make sure you add .png to the filename. 
     - Suppose you have heard the two sounds, and are now given these two spectrograms. Would you be able to figure which spectrogram belongs to which baby sound? If so, how? If not, explain why not.
 
 Plotting pitch contours 
@@ -163,7 +164,7 @@ Phonemes are the basic components of speech. The word "slit", for example, consi
 
 .. admonition:: Exercise 16
 
-    - To verify your identifications, extract each phoneme into a separate Praat object. Select the phoneme in the sound signal (you can either drag in the waveform or in the spectrogram), and click *File > Extract selected sound (preserve times)*. This will create a new Praat object, "untitled". Use the rename button to rename it "s", "l", "i" or "t" to help you remember which phoneme it contains. 
+    - To verify your identifications, extract each phoneme into a separate Praat object. Select the phoneme in the sound signal (you can either drag in the waveform or in the spectrogram), and click *Sound > Extract selected sound (preserve times)*. This will create a new Praat object, "untitled". Use the rename button to rename it "s", "l", "i" or "t" to help you remember which phoneme it contains. 
     - Create a spectrum (not a spectrogram) object for the /s/ (*fricative*) and /i/ (*vowel*) sound and compare the two. 
     - Now compare the /s/ and /i/ spectrums to the corresponding part of the spectrogram for slit.
 
@@ -195,7 +196,7 @@ Now we're going to insert the silence into our recording of the word "slit".
 
     - Go to the View & Edit window for the sound ``slit.wav``. 
     - Using the spectrogram and waveform, find a spot in between the "s" and the "l" sound and place the cursor there. 
-    - To prevent sudden jumps in the waveform, we should insert our silence at a moment where the wave crosses the zero line. After having placed the cursor between the "s" and "l" sound, click on *Select > Move cursor to nearest zero crossing*. 
+    - To prevent sudden jumps in the waveform, we should insert our silence at a moment where the wave crosses the zero line. After having placed the cursor between the "s" and "l" sound, click on *Sound > Move cursor to nearest zero crossing*. 
     - Now insert the silence we copied earlier by clicking *Edit > Paste after selection*, or by pressing Ctrl-V. 
     - Play the sound. Which word do you hear?
 
